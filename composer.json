@@ -1,0 +1,14 @@
+{
+    "name": "gmo/iso-639",
+    "description": "Convert between ISO-639 codes",
+    "keywords": ["iso", "iso-639", "639", "language"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gmo\\Iso639\\": "src"
+        }
+    }
+}
