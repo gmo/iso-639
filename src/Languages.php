@@ -273,6 +273,7 @@ class Languages implements \IteratorAggregate
      *
      * @param int $index
      * @param string $value
+     * @throw UnknownLanguage
      *
      * @return Language
      */
@@ -283,8 +284,8 @@ class Languages implements \IteratorAggregate
                 return new Language($language[0], $language[1], $language[2], $language[3], $language[4], $language[5]);
             }
         }
-
-        return new Language(null, null, null, null, null, null);
+        $findby = ['code1','code2t','code2b','code3','name'];
+        throw new UnknownLanguage("Can't find any language with {$findby[$index]} 'value'.");
     }
 
     /**
